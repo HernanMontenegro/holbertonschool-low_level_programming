@@ -9,8 +9,7 @@
  */
 int main(void)
 {
-int n;
-char c;
+int n, c;
  
 for (n = '0'; n <= '9'; ++n)
 {
