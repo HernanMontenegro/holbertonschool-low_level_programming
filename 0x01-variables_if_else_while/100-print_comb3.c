@@ -1,29 +1,27 @@
-#include <ctype.h>
 #include <stdio.h>
-#include <string.h>
 
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int first, second;
+	int i, j;
 
-	for (first = '0'; first <= '8'; first++)
+	for (i = 0; i < 9; i++)
 	{
-		for (second = first + 1; second <= '9'; second++)
+		for (j = i + 1; j < 10; j++)
 		{
-			putchar(first);
-			putchar(second);
-			if (first == '8' && second == '9')
-			{
+			putchar(i + '0');
+			putchar(j + '0');
+			if (i == 8 && j == 9)
 				break;
-			}
 			putchar(',');
 			putchar(' ');
 		}
 	}
 	putchar('\n');
+	return (0);
 }
