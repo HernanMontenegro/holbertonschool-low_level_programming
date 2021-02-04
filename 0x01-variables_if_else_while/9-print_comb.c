@@ -9,19 +9,20 @@
  */
 int main(void)
 {
-        int x;
-
-        for (x = '0'; x <= '9'; x++)
-        {
-                if (x == 9)
-                {
-                        putchar(x);
-                        break;
-                }
-
-                putchar(x + ", ");
-        }
-
-        putchar('\n');
-        return (0);
+int x;
+for (x = '0'; x <= '9'; x++)
+{
+if (x == '9')
+{
+putchar(x);
+putchar('\n');
+}
+else
+{
+putchar(x);
+putchar(',');
+putchar(' ');
+}
+}
+return (0);
 }
