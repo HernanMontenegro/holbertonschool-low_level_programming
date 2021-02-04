@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 
-/* more headers goes there */
-
 /**
  * main - Entry point
  *
@@ -11,16 +9,18 @@
  */
 int main(void)
 {
-int n, c;
- 
-for (n = '0'; n <= '9'; ++n)
-{
-putchar(n);
-}
-for (c = 'a'; c <= 'f'; ++c)
-{
-putchar(c);
-}
-putchar('\n');
-return (0);
+	int x, y;
+
+	for (x = '0'; x <= '9'; x++)
+	{
+		putchar(x);
+	}
+
+	for (y = 'a'; y <= 'f'; y++)
+	{
+		putchar(y);
+	}
+
+	putchar('\n');
+	return (0);
 }
