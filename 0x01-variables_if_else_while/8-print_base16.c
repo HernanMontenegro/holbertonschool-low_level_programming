@@ -1,4 +1,6 @@
+#include <ctype.h>
 #include <stdio.h>
+#include <string.h>
 
 /* more headers goes there */
 
