@@ -2,6 +2,10 @@
 
 /**
 * night - print the night hours
+* @i: first digit of the hour
+* @j: second digit of the hour
+* @k: third digit of the hour
+* @l: fourth digit of the hour
 * ---------------------------------
 * Return: void
 */
