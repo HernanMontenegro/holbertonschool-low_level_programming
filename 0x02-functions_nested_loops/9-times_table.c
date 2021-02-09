@@ -20,16 +20,30 @@ void times_table(void)
                                 lastDigit = n % 10;
 
                                 _putchar(firstDigit + '0');
-                                _putchar(lastDigit + '0');	  
+                                _putchar(lastDigit + '0');
+				if (i == 9)
+                                	continue;
+				_putchar(',');
+                        	_putchar(' ');	  
    			}
 			else
+			{
 				_putchar(n + '0');
+				if (i == 9)
+                                	continue;
 
-			if (i == 9)
-				continue;
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
+				if (n+multiplier >= 10)
+				{
+					_putchar(',');
+                                	_putchar(' ');
+				}
+				else
+				{
+					_putchar(',');
+                                	_putchar(' ');
+					_putchar(' ');
+				}
+			}
 		}
 		_putchar('\n');
 	}
