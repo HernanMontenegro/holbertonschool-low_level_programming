@@ -26,7 +26,7 @@ void print_times_table(int n)
 
                 if (j == n)
                     continue;
-                else if((multiplication + n) >= 100)
+                else if((multiplication + i) >= 100)
                 {
                     _putchar(',');
                     _putchar(' ');
@@ -56,7 +56,7 @@ void print_times_table(int n)
                 if (j == n)
                     continue;
 
-                else if((multiplication + n) >= 10)
+                else if((multiplication + i) >= 10)
                 {
                     _putchar(',');
                     _putchar(' ');
