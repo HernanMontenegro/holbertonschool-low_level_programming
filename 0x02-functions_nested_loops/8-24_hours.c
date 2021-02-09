@@ -52,5 +52,5 @@ void jack_bauer(void)
 			}
 		}
 	}
-	night(i,j,k,l);
+	night(i, j, k, l);
 }
