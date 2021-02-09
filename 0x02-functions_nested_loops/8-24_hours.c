@@ -10,12 +10,12 @@ void night(int i, int j, int k, int l)
 			{
 				for (l = '0'; l <= '9'; l++)
 				{
-						_putchar(i);
-						_putchar(j);
-						_putchar(':');
-						_putchar(k);
-						_putchar(l);
-						_putchar('\n');
+					_putchar(i);
+					_putchar(j);
+					_putchar(':');
+					_putchar(k);
+					_putchar(l);
+					_putchar('\n');
 				}
 			}
 		}
