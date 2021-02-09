@@ -1,8 +1,9 @@
 #include "holberton.h"
 
-/*
-*
-*
+/**
+* print_alphabet - print all the alphabet
+* ----------------------------
+* Return: void
 */
 void print_alphabet(void)
 {
