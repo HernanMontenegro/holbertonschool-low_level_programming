@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
-*
-*
+* _islower - detect if the character given is in lowercase or uppercase
+* ---------------------------------
+* Return: 1 if the character given is in lowercase, 0 if not
 */
 int _islower(int c)
 {
