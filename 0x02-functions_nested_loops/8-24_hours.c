@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+* night - print the night hours
+* ---------------------------------
+* Return: void
+*/
 void night(int i, int j, int k, int l)
 {
 	for (i = '2'; i <= '2'; i++)
