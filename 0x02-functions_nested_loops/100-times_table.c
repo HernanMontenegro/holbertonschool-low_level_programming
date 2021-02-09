@@ -23,21 +23,53 @@ void print_times_table(int n)
             {
                 _putchar(multiplication / 10 + '0');
                 _putchar(multiplication % 10 + '0');
+
+                if (j == n)
+                    continue;
+                else if((multiplication + n) >= 100)
+                {
+                    _putchar(',');
+                    _putchar(' ');
+                }
+                else
+                {
+                    _putchar(',');
+                    _putchar(' ');
+                    _putchar(' ');
+                }
             }
             else if (multiplication >= 100)
             {
                 _putchar(((multiplication / 10) / 10) + '0');
                 _putchar(((multiplication / 10) % 10) + '0');
-                _putchar((multiplication % 10) + '0');
+                _putchar((multiplication / 10) + '0');
+
+                if (j == n)
+                    continue;
+ 
+                    _putchar(',');
+                    _putchar(' ');
             }
             else
+            {
                 _putchar(multiplication + '0');
+                if (j == n)
+                    continue;
 
-            if (j == n)
-                continue;
-            
-            _putchar(',');
-            _putchar(' ');
+                else if((multiplication + n) >= 10)
+                {
+                    _putchar(',');
+                    _putchar(' ');
+                    _putchar(' ');
+                }
+                else
+                {
+                    _putchar(',');
+                    _putchar(' ');
+                    _putchar(' ');
+                    _putchar(' ');
+                }
+            }
         }
         _putchar('\n');
     }
