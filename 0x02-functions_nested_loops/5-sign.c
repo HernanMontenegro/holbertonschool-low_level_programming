@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
-*
-*
-*
+* print_sign - check the sign of the given number
+* @n: equal the number given
+* ---------------------------------
+* Return: 1 if the given is positive, 0 if is 0 and -1 if is negative
 */
 int print_sign(int n)
 {
