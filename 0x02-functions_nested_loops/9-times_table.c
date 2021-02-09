@@ -1,9 +1,9 @@
 #include "holberton.h"
 
-/*
-*
-*
-*
+/**
+* times_table - prints the multiplicable table from 0 to 9
+* ---------------------------------
+* Return: void
 */
 void times_table(void)
 {
