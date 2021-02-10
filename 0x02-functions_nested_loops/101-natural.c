@@ -7,16 +7,16 @@
 */
 int main(void)
 {
-	int result;
+	int i, result;
 
-	for (int i; i < 1024; i++)
+	for (i = 0; i < 1024; i++)
 	{
 		if (i % 3 == 0 || i % 5 == 0)
 		{
 			result += i;
 		}
 	}	
-	printf("%d", result);
+	printf("%d\n", result);
 	
 	return (0);
 }
