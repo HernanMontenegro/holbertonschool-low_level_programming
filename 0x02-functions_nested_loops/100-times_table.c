@@ -7,7 +7,7 @@
 * ------------------------------------
 * Return: void
 */
-void print_controller(int multiplication, int i)
+void print_controller(int multiplication)
 {
 if (multiplication >= 10 && multiplication < 100)
 {
@@ -32,7 +32,7 @@ _putchar(multiplication + '0');
 */
 void spaces_controller(int multiplication, int i)
 {
-else if ((multiplication + i) >= 100)
+if ((multiplication + i) >= 100)
 {
 _putchar(',');
 _putchar(' ');
@@ -70,10 +70,10 @@ for (j = 0; j <= n; j++)
 {
 int multiplication = i * j;
 
-print_controller(multiplication, i)
+print_controller(multiplication);
 if (j == n)
 continue;
-spaces_controller(multiplication, i)
+spaces_controller(multiplication, i);
 }
 _putchar('\n');
 }
