@@ -1,7 +1,10 @@
 #include <stdio.h>
 
-// Driver Code
-unsigned int main()
+/**
+* main - the main program function
+* Return: 0 if everything is correct
+*/
+int main()
 {
 unsigned int f1 = 1, f2 = 1, i;
 
