@@ -32,7 +32,7 @@ _putchar(multiplication + '0');
 */
 void spaces_controller(int multiplication, int i)
 {
-else if((multiplication + i) >= 100)
+else if ((multiplication + i) >= 100)
 {
 _putchar(',');
 _putchar(' ');
