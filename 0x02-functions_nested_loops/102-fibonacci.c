@@ -9,7 +9,7 @@ int main(void)
 {
 unsigned int f1 = 1, f2 = 1, i;
 
-for (i = 1; i <= 50; i++)
+for (i = 0; i < 50; i++)
 {
 printf("%u, ", f2);
 int next = f1 + f2;
