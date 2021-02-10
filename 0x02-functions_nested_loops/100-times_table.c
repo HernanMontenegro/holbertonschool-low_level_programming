@@ -28,18 +28,9 @@ void print_times_table(int n)
                 _putchar(((multiplication / 10) / 10) + '0');
                 _putchar(((multiplication / 10) % 10) + '0');
                 _putchar((multiplication % 10) + '0');
-
-                if (j == n)
-                    continue;
- 
-                    _putchar(',');
-                    _putchar(' ');
             }
             else
-            {
                 _putchar(multiplication + '0');
-
-            }
             if (j == n)
                 continue;
             else if((multiplication + i) >= 100)
