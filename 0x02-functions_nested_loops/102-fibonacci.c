@@ -1,24 +1,27 @@
 #include <stdio.h>
-
 /**
-* main - the main program function
-* -----------------------------------
-* Return: 0 if everything is correct
+* main - Entry point
+*
+* Description: Print the first 50 numbers of fibonacci secuence
+* Return: Always 0 (Success)
 */
 int main(void)
 {
-unsigned f1 = 1, f2 = 1, i;
+	long a = 1, b = 2, res, i;
 
-for (i = 0; i < 50; i++)
-{
-printf("%u", f2);
-int next = f1 + f2;
-f1 = f2;
-f2 = next;
-if(i == 49)
-continue;
-printf(", ");
-}
-printf("\n");
-return (0);
+	printf("%ld, ", a);
+	printf("%ld, ", b);
+	for (i = 3 ; i <= 50 ; i++)
+	{
+		res = a + b;
+		printf("%ld", res);
+		if (i != 50)
+		{
+			printf(", ");
+		}
+		a = b;
+		b = res;
+	}
+	printf("\n");
+	return (0);
 }
