@@ -3,7 +3,6 @@
 /**
 * print_controller - manages the number print
 * @multiplication: the number given
-* @i: the next number calculation
 * ------------------------------------
 * Return: void
 */
