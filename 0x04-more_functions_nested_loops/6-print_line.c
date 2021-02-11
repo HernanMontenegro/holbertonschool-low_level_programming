@@ -12,7 +12,7 @@ int i, maxWidth = n;
 
 for (i = 0; i <= maxWidth; i++)
 {
-if(i == 0)
+if (i == 0)
 continue;
 _putchar('_');
 }
