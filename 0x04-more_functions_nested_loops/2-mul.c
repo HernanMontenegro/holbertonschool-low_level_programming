@@ -7,7 +7,7 @@
  *  ---------------------------
  *  Return: a x b
  */
-int mul(int a, int b);
+int mul(int a, int b)
 {
 int res = a * b;
 
