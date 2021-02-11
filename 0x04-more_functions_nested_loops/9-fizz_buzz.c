@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - prints the numbers from 1 to 100, with Fizz Buzz
+ * main - prints the numbers from 1 to 100.
  * --------------------------------
  * Return: void
  */
@@ -25,8 +25,10 @@ continue;
 else if (i % 5 == 0)
 {
 if (i == 100)
+{
 printf("Buzz");
 continue;
+}
 printf("Buzz ");
 continue;
 }
