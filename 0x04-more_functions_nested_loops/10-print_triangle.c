@@ -20,7 +20,7 @@ for (j = 1; j <= spaces; j++)
 _putchar(' ');
 }
 for (k = 1; k <= maxSize - spaces; k++)
-{    
+{
 _putchar('#');
 }
 _putchar('\n');
