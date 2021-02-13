@@ -1,23 +1,15 @@
 #include "holberton.h"
 
 /**
- * puts2 - prints every other character of a string, starting with the first character, followed by a new line.
- * @str: the string given
- * ------------------------------------
- * Return: void
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
  */
-void puts2(char *str)
+int main(void)
 {
-int i, count;
+    char *str;
 
-for (count = 0; str[count] != '\0'; count++)
-{
-
-}
-for (i = 0; i < count-1; i++)
-{
-if(i % 2 == 0)
-_putchar(str[i]);
-}
-_putchar('\n');
+    str = "0123456789";
+    puts_half(str);
+    return (0);
 }
