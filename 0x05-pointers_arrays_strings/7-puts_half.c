@@ -15,7 +15,7 @@ for (i = 0; str[i] != '\0'; i++)
 length_of_the_string++;
 }
 
-if(length_of_the_string % 2 == 0)
+if (length_of_the_string % 2 == 0)
 count = i / 2;
 else
 count = (i - 1) / 2;
