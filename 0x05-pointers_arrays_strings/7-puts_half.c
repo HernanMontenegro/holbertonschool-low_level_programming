@@ -15,10 +15,10 @@ for (i = 0; str[i] != '\0'; i++)
 
 }
 
-if (i % 2 == 0)
-count = i / 2;
-else
+if (i % 2 != 0)
 count = (i - 1) / 2;
+else
+count = i / 2;
 
 for (j = count; j <= i; j++)
 {
