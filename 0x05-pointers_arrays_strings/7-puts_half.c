@@ -10,9 +10,9 @@ void puts_half(char *str)
 {
 int length_of_the_string, j, n;
 
-for (length_of_the_string = 0; str[length_of_the_string] != '\0'; length_of_the_string++)
+for (length_of_the_string = 0; str[length_of_the_string] != '\0')
 {
-
+length_of_the_string++;
 }
 
 if (length_of_the_string % 2 == 0)
