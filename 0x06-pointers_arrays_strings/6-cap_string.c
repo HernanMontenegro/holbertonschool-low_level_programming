@@ -13,12 +13,11 @@ char *cap_string(char *c)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		for (j = 0; j < sizeof(s) / sizeof(char); j++)
+		for (j = 0; j < sizeof(s); j++)
 		{
 			if (c[i] == s[j] && c[i + 1] >= 97 && c[i + 1] <= 122)
 			{
 				c[i + 1] -= 32;
-				break;
 			}
 		}
 	}
