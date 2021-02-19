@@ -8,13 +8,12 @@
 */
 char *cap_string(char *c)
 {
-
 	unsigned int  i, j;
 	char s[] = {32, '\t', '\n', ',', 59, 46, 33, 63, 61, '(', ')', '{', '}'};
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		for (j = 0; j < sizeof(s); j++)
+		for (j = 0; j < sizeof(s) / sizeof(char); j++)
 		{
 			if (c[i] == s[j] && c[i + 1] >= 97 && c[i + 1] <= 122)
 			{
