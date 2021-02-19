@@ -10,13 +10,17 @@ char *rot13(char *c)
 {
 	int i, j;
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
 		for (j = 0; alphabet[j] != '\0'; j++)
 		{
 			if (c[i] == alphabet[j])
-				c[i] = alphabet[j + 13];
+			{
+				c[i] = rot[j];
+				break;
+			}
 		}
 	}
 
