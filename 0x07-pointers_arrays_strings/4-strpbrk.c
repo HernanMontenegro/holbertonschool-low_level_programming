@@ -24,11 +24,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 	}
 
-	if (s[i] == accept[j])
-	{
-		p = &s[i];
-		return (p);
-	}
-
-	return (0);
+	return (p);
 }
