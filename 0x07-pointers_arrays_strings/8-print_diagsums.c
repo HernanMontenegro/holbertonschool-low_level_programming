@@ -2,8 +2,11 @@
 #include <stdio.h>
 
 /**
-*
-*
+* print_diagsums - print a matrix diags sum
+* @a: the matrix pointer given
+* @size: the size of the matrix
+* ------------------------------------
+* Return: void
 */
 void print_diagsums(int *a, int size)
 {
