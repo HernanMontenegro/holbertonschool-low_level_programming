@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-* _memset - fills memory with a constant byte
+* _memcpy - fills memory with a constant byte
 * @dest: the buffer destination
 * @src: the buffer source
 * @n: first bytes to copy
