@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-* _strchr - locate a character in a string
+* _strspn - locate characters in a string
 * @s: the string to scan
 * @accept: bytes to check
 * ------------------------------------------------
