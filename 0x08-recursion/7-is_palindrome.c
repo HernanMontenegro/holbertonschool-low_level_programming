@@ -19,10 +19,6 @@ int palindrome_check(char *c, int left, int right)
 	{
 		return (0);
 	}
-	else if (left % 2 == 0)
-	{
-		return (1);
-	}
 
 	return (0);
 }
