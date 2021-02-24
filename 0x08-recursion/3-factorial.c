@@ -1,7 +1,10 @@
 #include "holberton.h"
 
 /**
-*
+* factorial - calculates the factorial of an integer
+* @n: the factorial to calculate
+* -------------------------------------
+* Return: the factorial integer
 */
 int factorial(int n)
 {
