@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+* get_sqrt - do all roots calculations
+* @n: the number to get root
+* @i: the current number check
+* -----------------------------------------
+* Return: integer found
+*/
 int get_sqrt(int n, int i)
 {
 	if (i * i == n)
