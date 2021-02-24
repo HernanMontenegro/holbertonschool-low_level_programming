@@ -15,10 +15,8 @@ int palindrome_check(char *c, int left, int right)
 		palindrome_check(c, left + 1, right - 1);
 		return (1);
 	}
-	else if (c[left] != c[right])
-	{
+	else
 		return (0);
-	}
 
 	return (0);
 }
