@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
 * main - the main fuction of the program
@@ -8,20 +9,32 @@
 * ----------------------------
 * Return: void
 */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	if (argc < 2)
+	if (argc == 1)
 	{
-		printf("Error\n");
-		return (1);
+		printf("0\n");
+		return (0);
 	}
 
-	argc = argc;
-	argv = argv;
+	int i, j, add = 0;
 
-	int mul = atoi(argv[1]) * atoi(argv[2]);
+	for (i = 1; i < argc; i++)
+	{
+		for (j = 0; *argv[j] != '\0'; j++)
+		{
+			if (isalpha(*argv[j]) == 0)
+				continue;
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		add += atoi(argv[i]);
+	}
 
-	printf("%d\n", mul);
+	printf("%d\n", add);
 
-	return (mul);
+	return (add);
 }
