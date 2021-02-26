@@ -7,11 +7,7 @@
 * ----------------------------
 * Return: void
 */
-int main(int argc, char **argv)
+void main(int argc, char **argv)
 {
-	argv[0] = argv[0];
-
-	printf("%d\n", argc - 1);
-
-	return (0);
+	printf("%s\n", argv[0]);
 }

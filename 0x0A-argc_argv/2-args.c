@@ -9,9 +9,12 @@
 */
 int main(int argc, char **argv)
 {
-	argv[0] = argv[0];
+	int i;
 
-	printf("%d\n", argc - 1);
+	for (i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+	}
 
 	return (0);
 }
