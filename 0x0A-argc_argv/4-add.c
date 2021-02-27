@@ -1,3 +1,4 @@
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -11,15 +12,15 @@
 */
 int main(int argc, char *argv[])
 {
-	if (argc == 1)
+	int i, j, sum;
+
+	if (argc < 2)
 	{
 		printf("0\n");
 		return (0);
 	}
 
-	int i, j, add = 0;
-
-	for (i = 1; i < argc; i++)
+	for (i = 1, sum = 0; i < argc; i++)
 	{
 		for (j = 0; argv[i][j]; j++)
 		{
@@ -29,10 +30,9 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		add += atoi(argv[i]);
+		sum += atoi(argv[i]);
 	}
 
-	printf("%d\n", add);
-
-	return (add);
+	printf("%d\n", sum);
+	return (0);
 }
