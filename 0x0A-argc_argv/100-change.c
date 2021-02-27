@@ -17,13 +17,13 @@ int main(int argc, char *argv[])
 	}
 	else if (atoi(argv[1]) < 0)
 	{
-		printf ("0\n");
+		printf("0\n");
 		return (0);
 	}
 
 	int cost = atoi(argv[1]);
 	int result = 0, i;
-	int coins[5] = {1 , 2, 5, 10, 25};
+	int coins[5] = {1, 2, 5, 10, 25};
 
 	for (i = 4; i >= 0; i--)
 	{
