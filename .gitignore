@@ -8,4 +8,5 @@
 !*.md
 !*.h
 !*.a
+!*.sh
 !.gitignore
