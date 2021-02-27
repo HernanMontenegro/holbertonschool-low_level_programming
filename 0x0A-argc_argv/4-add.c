@@ -21,11 +21,9 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; *argv[j] != '\0'; j++)
+		for (j = 0; argv[i][j]; j++)
 		{
-			if (isalpha(*argv[j]) == 0)
-				continue;
-			else
+			if (isalpha(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
