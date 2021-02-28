@@ -1,7 +1,5 @@
-#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 /**
  * main - the entry function
@@ -12,19 +10,6 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j, result = 0;
-
-	for (i = 1; i < argc; i++)
-	{
-		for (j = 0; argv[i][j]; j++)
-		{
-			if (isalpha(argv[i][j]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-	}
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -32,12 +17,13 @@ int main(int argc, char *argv[])
 	}
 	else if (atoi(argv[1]) < 0)
 	{
-		printf("0\n");
+		printf ("0\n");
 		return (0);
 	}
 
 	int cost = atoi(argv[1]);
-	int coins[5] = {1, 2, 5, 10, 25};
+	int result = 0, i;
+	int coins[5] = {1 , 2, 5, 10, 25};
 
 	for (i = 4; i >= 0; i--)
 	{
@@ -54,5 +40,5 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	return (result);
+	return (0);
 }
