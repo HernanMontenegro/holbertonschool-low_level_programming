@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int result = 0, i, cost;
-        int coins[5] = {1 , 2, 5, 10, 25};
+	int coins[5] = {1, 2, 5, 10, 25};
 
 	if (argc != 2)
 	{
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	}
 	else if (atoi(argv[1]) < 0)
 	{
-		printf ("0\n");
+		printf("0\n");
 		return (0);
 	}
 
