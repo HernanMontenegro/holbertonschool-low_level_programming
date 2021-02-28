@@ -10,6 +10,9 @@
  */
 int main(int argc, char *argv[])
 {
+	int result = 0, i, cost;
+        int coins[5] = {1 , 2, 5, 10, 25};
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -21,9 +24,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	int cost = atoi(argv[1]);
-	int result = 0, i;
-	int coins[5] = {1 , 2, 5, 10, 25};
+	cost = atoi(argv[1]);
 
 	for (i = 4; i >= 0; i--)
 	{
