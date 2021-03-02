@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 			fallout[i + j] = s2[j];
 	}
 	if (!s1 && !s2)
-		*fallout = "";
+		fallout = '\0';
 
 	return (fallout);
 }
