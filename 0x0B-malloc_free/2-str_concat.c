@@ -1,7 +1,11 @@
 #include <stdlib.h>
 
 /**
-*
+* str_concat - concatenate two strings
+* @s1: first string
+* @s2: second string
+* ---------------------------------
+* Return: char pointer concatenated
 */
 char *str_concat(char *s1, char *s2)
 {
@@ -21,5 +25,5 @@ char *str_concat(char *s1, char *s2)
 		fallout[i + j] = s2[j];
 	fallout[i + j] = '\0';
 
-	return(fallout);
+	return (fallout);
 }
