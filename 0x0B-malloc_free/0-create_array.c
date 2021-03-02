@@ -13,8 +13,10 @@ char *create_array(unsigned int size, char c)
 	unsigned int i, length;
 
 	length = sizeof(char) * size;
-
 	str = malloc(length);
+
+	if (!str || size == 0)
+		return (NULL);
 
 	for (i = 0; i < length; i++)
 		str[i] = c;
