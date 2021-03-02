@@ -26,4 +26,3 @@ char *_strdup(char *str)
 		uwu[i] = str[i];
 	return (uwu);
 }
-}
