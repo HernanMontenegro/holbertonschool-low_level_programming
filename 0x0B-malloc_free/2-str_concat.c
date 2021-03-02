@@ -21,7 +21,7 @@ char *str_concat(char *s1, char *s2)
 	i++;
 	j++;
 
-	fallout = malloc(sizeof(char) * (i + j));
+	fallout = malloc(sizeof(char) * i + j);
 	if (!fallout)
 		return (NULL);
 
