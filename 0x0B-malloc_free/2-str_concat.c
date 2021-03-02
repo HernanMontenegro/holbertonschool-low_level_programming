@@ -10,7 +10,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	if (!s1 || !s2)
-		return (NULL);
+		return ("");
 
 	char *fallout;
 	int i, j;
