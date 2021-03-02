@@ -9,9 +9,6 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	if (!s1 || !s2)
-		return ("");
-
 	char *fallout;
 	int i, j;
 
@@ -23,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	fallout = malloc(sizeof(char) * i + j + 2);
-	if (!fallout)
+	if (!fallout || !s1 || !s2)
 		return (NULL);
 
 	for (i = 0; s1[i] != '\0'; i++)
