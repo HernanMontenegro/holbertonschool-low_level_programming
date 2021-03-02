@@ -20,9 +20,8 @@ char *_strdup(char *str)
 	if (!strcopy || !str)
 		return (NULL);
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; i < sizeof(str); i++)
 		strcopy[i] = str[i];
-	strcopy[i] = str[i];
 
 	return (strcopy);
 }
