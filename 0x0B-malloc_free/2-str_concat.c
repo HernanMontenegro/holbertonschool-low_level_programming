@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 	{
 	}
 
-	fallout = malloc(sizeof(char) * i + j - 1);
+	fallout = malloc(sizeof(char) * i + j);
 	if (!fallout)
 		return (NULL);
 
