@@ -9,6 +9,12 @@
 */
 char *str_concat(char *s1, char *s2)
 {
+	if (!s1 || !s2)
+	{
+		char *c = "";
+		return (c);
+	}
+
 	char *fallout;
 	int i, j;
 
