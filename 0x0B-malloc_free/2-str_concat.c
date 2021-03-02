@@ -20,6 +20,8 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	fallout = malloc((sizeof(char) * i + 1) + (sizeof(char) * j + 1));
+	if (!fallout)
+		return (NULL);
 
 	for (i = 0; s1[i] != '\0'; i++)
 		fallout[i] = s1[i];
