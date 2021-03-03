@@ -10,10 +10,17 @@
 */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k = 0;
+	int i, j, k = 0, matrixLen = 0;
 	char *sas;
 
-	sas = malloc(sizeof(char) * ac);
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j]; j++, k++)
+			matrixLen++;
+		matrixLen++;
+	}
+
+	sas = malloc(sizeof(char) * matrixLen);
 
 	if (!sas)
 		return (NULL);
