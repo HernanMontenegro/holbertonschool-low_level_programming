@@ -33,7 +33,9 @@ char *argstostr(int ac, char **av)
 			sas[k] = av[i][j];
 		}
 		sas[k] = '\n';
+		k++;
 	}
+	sas[k] = '\0';
 
 	return (sas);
 }
