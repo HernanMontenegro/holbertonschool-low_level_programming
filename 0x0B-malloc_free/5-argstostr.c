@@ -22,6 +22,7 @@ char *argstostr(int ac, char **av)
 			matrixLen++;
 		matrixLen++;
 	}
+	matrixLenÂ++;
 	sas = malloc(sizeof(char) * matrixLen);
 
 	if (!sas)
