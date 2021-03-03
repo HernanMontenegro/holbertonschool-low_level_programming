@@ -12,12 +12,13 @@ char *argstostr(int ac, char **av)
 {
 	int i, j, k = 0;
 	char *sas;
+
 	sas = malloc(sizeof(char) * ac);
 
 	if (!sas)
 		return (NULL);
 	if (ac == 0 || !av)
-                return (NULL);
+		return (NULL);
 
 	for (i = 0; i < ac; i++)
 	{
