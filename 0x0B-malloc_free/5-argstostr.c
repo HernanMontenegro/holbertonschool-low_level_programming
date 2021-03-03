@@ -13,6 +13,9 @@ char *argstostr(int ac, char **av)
 	int i, j, k = 0, matrixLen = 0;
 	char *sas;
 
+	if (ac == 0 || !av)
+		return (NULL);
+
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++)
@@ -22,8 +25,6 @@ char *argstostr(int ac, char **av)
 	sas = malloc(sizeof(char) * matrixLen);
 
 	if (!sas)
-		return (NULL);
-	if (ac == 0 || !av)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
