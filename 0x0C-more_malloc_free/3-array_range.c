@@ -1,9 +1,11 @@
 #include <stdlib.h>
 
 /**
-*
-*
-*
+* array_range - create an array with a range
+* @min: min integer
+* @max: max integer
+* ----------------------------------
+* Return: pointer to an array
 */
 int *array_range(int min, int max)
 {
@@ -19,7 +21,7 @@ int *array_range(int min, int max)
 	if (!res)
 		return (NULL);
 
-	for (i = 0; i <= between; i++, min++)
+	for (i = 0; i < between; i++, min++)
 		res[i] = min;
 
 	return (res);
