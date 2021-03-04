@@ -1,8 +1,12 @@
 #include <stdlib.h>
 
 /**
-*
-*
+* _realloc - reallocate memory
+* @ptr: the pointer given
+* @old_size: the old size in memory
+* @new_size: the memory addition
+* ----------------------------------------
+* Return: pointer with new allocation
 */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
