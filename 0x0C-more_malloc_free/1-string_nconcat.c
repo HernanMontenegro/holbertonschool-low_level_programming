@@ -2,7 +2,12 @@
 #include <stdio.h>
 
 /**
-*
+* string_nconcat - concatenate two strings
+* @s1: first string
+* @s2: second string
+* @n: amount of chars to concatenate
+* ---------------------------------------
+* Return: pointer to a new string
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -30,12 +35,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (!str)
 		return (NULL);
 
-	for (s1_len = 0; s1[s1_len] != '\0'; s1_len++)
-		str[s1_len] = s1[s1_len];
-	s1_len++;
-	str[s1_len] = '\0';
+	for (i = 0; s1[i] != '\0'; i++)
+		str[i] = s1[i];
 
-	for (i = s1_len, j = 0; j <= n; i++, j++)
+	for (j = 0; j <= n; i++, j++)
 	{
 		str[i] = s2[j];
 	}
