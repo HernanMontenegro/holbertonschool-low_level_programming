@@ -40,6 +40,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!d)
 		return (NULL);
 
+	if (!name)
+		return (NULL);
+	if (!owner)
+		return (NULL);
+
 	copy_name = malloc(sizeof(char) * my_strlen(name));
 	if (!copy_name)
 	{
