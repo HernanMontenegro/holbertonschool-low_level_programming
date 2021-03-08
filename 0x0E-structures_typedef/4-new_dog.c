@@ -3,6 +3,26 @@
 #include <stdio.h>
 
 /**
+* my_strlen - get the length of a string
+* @s:the string given
+* --------------------------------
+* Return: the length
+*/
+int my_strlen(char *s)
+{
+	int n = 0;
+
+	if (*s != '\0')
+		n = n + my_strlen(s + 1);
+	else
+		return (0);
+
+	n++;
+
+	return (n);
+}
+
+/**
 * new_dog - create a new dog
 * @name: dog's name
 * @age: dog's age
@@ -20,7 +40,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!d)
 		return (NULL);
 
-	copy_name = malloc(sizeof(name));
+	copy_name = malloc(sizeof(char) * my_strlen(name));
 	if (!copy_name)
 	{
 		free(d);
@@ -30,7 +50,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		copy_name[i] = name[i];
 	copy_name[i] = '\0';
 
-	copy_owner = malloc(sizeof(owner));
+	copy_owner = malloc(sizeof(char) * my_strlen(owner));
 	if (!copy_owner)
 	{
 		free(d);
