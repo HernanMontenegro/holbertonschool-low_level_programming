@@ -10,16 +10,26 @@
 int main(int argc, char *argv[])
 {
 	int first, second;
-/*	char *op;
-	int (*get)(int, int);
-*/
+	char *op;
+
+	op = argv[2];
+
 	if (argc != 4)
-		return (1);
+	{
+		printf("Error\n");
+		exit(98);
+	}
 
 	first = atoi(argv[1]);
 	second = atoi(argv[3]);
 
-	printf("%d\n", get_op_func(argv[2])(first, second));
+	if ((op[0] == '/' || op[0] == '%') && second == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	printf("%d\n", get_op_func(op)(first, second));
 
 	return (0);
 }
