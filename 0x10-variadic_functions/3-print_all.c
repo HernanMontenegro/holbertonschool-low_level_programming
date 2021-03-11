@@ -63,8 +63,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 
-	datazita datazita0[] =
-	{
+	datazita datazita0[] =	{
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
