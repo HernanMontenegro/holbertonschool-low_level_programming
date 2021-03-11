@@ -1,5 +1,11 @@
 #include "variadic_functions.h"
 
+/**
+* print_string - prints a string
+* @args: argument to print
+* --------------------
+* Return: void
+*/
 void print_string(va_list args)
 {
 	char *str;
@@ -12,16 +18,34 @@ void print_string(va_list args)
 	printf("%s", str);
 }
 
+/**
+* print_float - prints a float
+* @args: argument to print
+* --------------------
+* Return: void
+*/
 void print_float(va_list args)
 {
 	printf("%f", va_arg(args, double));
 }
 
+/**
+* print_int - prints a int
+* @args: argument to print
+* --------------------
+* Return: void
+*/
 void print_int(va_list args)
 {
 	printf("%d", va_arg(args, int));
 }
 
+/**
+* print_char - prints a char
+* @args: argument to print
+* --------------------
+* Return: void
+*/
 void print_char(va_list args)
 {
 
@@ -41,7 +65,7 @@ void print_all(const char * const format, ...)
 
 	datazita datazita0[] =
 	{
-		{"c", print_string},
+		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
 		{"s", print_string},
