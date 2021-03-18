@@ -34,13 +34,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_obj->str = strdup(str);
 	new_obj->len = _strlen(str);
 	new_obj->next = NULL;
-	
+
 	if (!*head)
 	{
 		*head = new_obj;
 		return (new_obj);
 	}
-	
+
 	previous = *head;
 
 	while ((*previous).next)
