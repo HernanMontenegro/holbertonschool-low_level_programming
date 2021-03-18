@@ -1,19 +1,20 @@
 #include "lists.h"
 
-/* _strlen - return the length of the string
- *@s: string
- * ------------------------
- * Return: void.
+/**
+* _strlen - return the length of the string
+* @s: string
+* ------------------------
+* Return: void.
 */
 int _strlen(const char *s)
 {
-        int i;
+	int i;
 
-        for (i = 0; s[i] != '\0'; i++)
-        {
-        }
+	for (i = 0; s[i] != '\0'; i++)
+	{
+	}
 
-        return (i);
+	return (i);
 }
 
 /**
@@ -44,7 +45,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	previous = *head;
 
-	while((*previous).next)
+	while ((*previous).next)
 		previous = (*previous).next;
 
 	new_obj = malloc(sizeof(list_t));
