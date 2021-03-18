@@ -12,7 +12,7 @@ size_t print_list(const list_t *h)
 	list_t *search = (list_t *) h;
 
 	if (!h)
-		return (-1);
+		return (count);
 
 	if (!(*search).str)
 	{
