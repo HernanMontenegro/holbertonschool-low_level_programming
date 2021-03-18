@@ -8,18 +8,18 @@
 */
 void free_list(list_t *head)
 {
-	list_t *current = head;
-	list_t *next;
+	list_t *ram = head;
 
-	if (!head)
-		return;
-
-	while (current)
+	for (; 1 == 1;)
 	{
-		next = current;
-		current = current->next;
-		if (next->str)
-			free(next->str);
-		free(next);
+		ram = head;
+
+		if (head == NULL)
+			break;
+
+		head = head->next;
+
+		free(ram->str);
+		free(ram);
 	}
 }
