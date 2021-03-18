@@ -14,14 +14,13 @@ size_t print_list(const list_t *h)
 	if (!h)
 		return (count);
 
-	if (!(*search).str)
-	{
-		(*search).str = "(nil)";
-		(*search).len = 0;
-	}
-
 	while (search)
 	{
+		if (!(*search).str)
+		{
+			search->str = "(nil)";
+			search->len = 0;
+		}
 		printf("[%u] %s\n", (*search).len, (*search).str);
 		search = (*search).next;
 		count++;
