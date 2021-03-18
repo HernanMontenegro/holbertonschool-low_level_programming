@@ -15,7 +15,10 @@ size_t list_len(const list_t *h)
 		return (count);
 
 	while (search)
+	{
+		search = (*search).next;
 		count++;
+	}
 
 	return (count);
 }
