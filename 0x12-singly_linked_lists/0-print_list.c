@@ -16,7 +16,7 @@ size_t print_list(const list_t *h)
 
 	while (search)
 	{
-		if (!(*search).str)
+		if (!search->str)
 		{
 			search->str = "(nil)";
 			search->len = 0;
