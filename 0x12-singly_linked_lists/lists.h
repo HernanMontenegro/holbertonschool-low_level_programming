@@ -11,8 +11,7 @@ int _putchar(char c);
 #include <stddef.h>
 #include <stdlib.h>
 
-/**
-/*============================*/
+/* ============================ */
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
@@ -28,7 +27,7 @@ typedef struct list_s
     unsigned int len;
     struct list_s *next;
 } list_t;
-/*============================*/
+/* ============================ */
 
 /* Prototypes */
 
