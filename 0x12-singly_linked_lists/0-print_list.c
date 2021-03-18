@@ -11,6 +11,9 @@ size_t print_list(const list_t *h)
 	size_t count = 0;
 	list_t *search = (list_t *) h;
 
+	if (!h)
+		return (-1);
+
 	if (!(*search).str)
 	{
 		(*search).str = "(nil)";
