@@ -28,21 +28,20 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_obj = NULL, *previous = NULL;
 
-	/* this just will happen 1 time */
+	new_obj = malloc(sizeof(list_t));
+	if (!new_obj)
+		return (NULL);
+
+	new_obj->len = _strlen(str);
+	new_obj->str = strdup(str);
+	new_obj->next = NULL;
+	
 	if (!*head)
 	{
-		new_obj = malloc(sizeof(list_t));
-		if (!new_obj)
-			return (NULL);
-
-		new_obj->len = _strlen(str);
-		new_obj->str = strdup(str);
-		new_obj->next = NULL;
 		*head = new_obj;
-
-		return (*head);
+		return (new_obj);
 	}
-
+	
 	previous = *head;
 
 	while ((*previous).next)
@@ -51,9 +50,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_obj = malloc(sizeof(list_t));
 	if (!new_obj)
 		return (NULL);
-	(*new_obj).str = strdup(str);
-	(*new_obj).len = _strlen(str);
-	(*previous).next = new_obj;
+	previous->next = new_obj;
 
 	return (new_obj);
 }
