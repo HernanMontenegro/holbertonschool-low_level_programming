@@ -26,7 +26,7 @@ int _strlen(const char *s)
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_obj, *previous = NULL;
+	list_t *new_obj = NULL, *previous = NULL;
 
 	/* this just will happen 1 time */
 	if (!*head)
