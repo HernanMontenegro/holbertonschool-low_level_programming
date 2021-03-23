@@ -17,8 +17,6 @@ void free_listint2(listint_t **head)
 	{
 		aux = obj->next;
 		free(obj);
-		if (!aux)
-			break;
 		obj = aux;
 	}
 
