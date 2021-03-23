@@ -1,6 +1,14 @@
 #include "lists.h"
 #include "7-get_nodeint.c"
 
+/**
+* insert_nodeint_at_index - insert a new node at index
+* @head: the head node
+* @idx: the index to insert
+* @n: the value to insert
+* --------------------------------------
+* Return: a new node at index idx
+*/
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *new_obj = NULL;
@@ -14,7 +22,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	/* Create the new node  */
 	new_obj = malloc(sizeof(listint_t));
-	if (!new_obj || !target)
+	if (!new_obj || !*head)
 		return (NULL);
 	new_obj->n = n;
 	new_obj->next = target;
