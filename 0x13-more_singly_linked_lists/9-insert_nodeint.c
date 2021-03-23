@@ -38,18 +38,19 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *previous = NULL;
 	listint_t *target = NULL;
 
-	target = get_nodeint_at_index(*head, idx);
-
 	/* Create the new node  */
 	new_obj = malloc(sizeof(listint_t));
 	if (!new_obj)
 		return (NULL);
-	/* Return NULL if not exist head neither idx  */
-	else if (!*head || listint_count(*head) < idx)
+	/* Return NULL if idx not exist  */
+	if (!head || listint_count(*head) < idx)
 	{
 		free(new_obj);
 		return (NULL);
 	}
+
+	target = get_nodeint_at_index(*head, idx);
+
 	new_obj->n = n;
 	new_obj->next = target;
 
