@@ -1,5 +1,4 @@
 #include "lists.h"
-#include "4-free_listint.c"
 
 /**
 * free_listint2 - frees a list
@@ -9,6 +8,14 @@
 */
 void free_listint2(listint_t **head)
 {
-	free_listint(*head);
+	listint_t *obj = *head;
+
+	while (*head)
+	{
+		*head = obj->next;
+		free(obj);
+		obj = *head;
+	}
+
 	*head = NULL;
 }
