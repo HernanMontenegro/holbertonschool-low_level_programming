@@ -1,22 +1,14 @@
 #include "lists.h"
+#include "4-free_listint.c"
 
 /**
 * free_listint2 - frees a list
 * @head: the head node
 * --------------------------------
-* Return't
+* Return: void
 */
 void free_listint2(listint_t **head)
 {
-	listint_t *current = *head;
-	listint_t *next;
-
-	while (current)
-	{
-		next = current->next;
-		free(current);
-		current = next;
-	}
-
+	free_listint(*head);
 	*head = NULL;
 }
