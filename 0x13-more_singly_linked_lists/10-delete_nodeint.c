@@ -1,59 +1,58 @@
 #include "lists.h"
+#include "7-get_nodeint.c"
 
 /**
-* get_nodeint_at_index - search by index
-* @head: the head node
-* @index: the index to search
-* --------------------------------------------
-* Return: the node index
+* listint_count - counts the list length
+* @h: a node given
+* ------------------------
+* Return: the length of a list
 */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+unsigned int listint_count(const listint_t *h)
 {
 	unsigned int count = 0;
-	listint_t *pos;
+	listint_t *current_h = (listint_t *) h;
 
-	pos = head;
-	while (pos && count != index)
+	if (!h)
+		return (count);
+
+	while (current_h)
 	{
-		pos = pos->next;
 		count++;
+		current_h = current_h->next;
 	}
 
-	return (pos);
+	return (count);
 }
 
 /**
-* delete_nodeint_at_index - delete a node in an index
+* delete_nodeint_at_index - delete by index
 * @head: the head node
-* @index: the index to remove
-* -----------------------------------
-* Return: 1 if it succeeded, -1 if not
+* @index: the index to delete
+* --------------------------------------------
+* Return: the node index
 */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *previous = NULL;
 	listint_t *target = NULL;
-	listint_t *next_one = NULL;
+	listint_t *next = NULL;
 
-	if (*head)
+	if (!head || !*head || listint_count(*head) < index)
+		return (-1);
+
+	target = get_nodeint_at_index(*head, index);
+	next = target->next;
+
+	/* Checks if exist a previous node or if it's the head  */
+	if (index != 0)
 	{
 		previous = get_nodeint_at_index(*head, index - 1);
-		target = get_nodeint_at_index(*head, index);
-		next_one = target->next;
+		previous->next = next;
 	}
+	else
+		*head = next;
 
-	if (index == 0 && *head)
-	{
-		free(*head);
-		*head = next_one;
-		return (1);
-	}
-	else if (previous || target)
-	{
-		free(target);
-		previous->next = next_one;
-		return (1);
-	}
+	free(target);
 
-	return (-1);
+	return (1);
 }
