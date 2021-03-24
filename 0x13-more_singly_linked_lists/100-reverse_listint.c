@@ -41,7 +41,7 @@ listint_t *reverse_listint(listint_t **head)
 	idx = listint_count(*head) - 1;
 	current = get_nodeint_at_index(*head, idx);
 
-	for (idx--; idx < listint_count(*head); idx--)
+	for (idx--; idx > listint_count(*head); idx--)
 	{
 		if (idx == 0)
 		{
