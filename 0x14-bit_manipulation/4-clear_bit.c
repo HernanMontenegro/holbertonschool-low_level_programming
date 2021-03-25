@@ -1,9 +1,11 @@
 #include "holberton.h"
 
 /**
-*
-*
-*
+* clear_bit - puts a bit in 0
+* @n: the number to operate
+* @index: the bit index to modify
+* ------------------------------------------
+* Return: modified value
 */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
