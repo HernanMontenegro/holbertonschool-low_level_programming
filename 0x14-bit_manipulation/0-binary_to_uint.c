@@ -10,14 +10,18 @@
 unsigned int binary_to_uint(const char *b)
 {
 	char *str = (char *) b;
-	int entry_num = _atoi(str);
-	int conversion = 0;
 	int last_digit;
+	int entry_num;
+	int conversion;
 	int base = 1;
-	int temp = entry_num;
+	int temp;
 
 	if (!b || !isBinary(b))
 		return (0);
+
+	entry_num = _atoi(str);
+	conversion = 0;
+	temp = entry_num;
 
 	while (temp)
 	{
@@ -29,5 +33,5 @@ unsigned int binary_to_uint(const char *b)
 		base *= 2;
 	}
 
-	return (dec_value);
+	return (conversion);
 }
