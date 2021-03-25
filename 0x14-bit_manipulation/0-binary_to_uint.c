@@ -10,26 +10,15 @@
 unsigned int binary_to_uint(const char *b)
 {
 	char *str = (char *) b;
-	unsigned int last_digit;
-	unsigned int entry_num;
-	unsigned int conversion;
-	unsigned int base = 1;
-	unsigned int temp;
+	unsigned int conversion = 0, base = 1;
+	int i;
 
 	if (!b || !isBinary(b))
-		return (0);
+		return (conversion);
 
-	entry_num = _atoi(str);
-	conversion = 0;
-	temp = entry_num;
-
-	while (temp)
+	for (i = _strlen(str) - 1; i >= 0; i--)
 	{
-		last_digit = temp % 10;
-		temp = temp / 10;
-
-		conversion += last_digit * base;
-
+		conversion += (str[i] - '0') * base;
 		base *= 2;
 	}
 
