@@ -1,11 +1,13 @@
 #include "holberton.h"
 #include "my_lib.c"
 
-void _reworked_putchar(unsigned long int m)
-{
-	_putchar((m % 2) + '0');
-}
-
+/**
+* print_process - prints recursively using bitware ops
+* @n: number to compute
+* @rec: keep track of recursive times
+* ---------------------------------------------
+* Return: void
+*/
 void print_process(unsigned long int n, long int *rec)
 {
 	unsigned long int m = n;
@@ -18,13 +20,14 @@ void print_process(unsigned long int n, long int *rec)
 
 	*rec = *rec + 1;
 
-	if (m * 0.5)
+	/* Is the same as divide by 2  */
+	if (m >> 1)
 	{
-		print_process(m * 0.5, rec);
+		print_process(m >> 1, rec);
 	}
 
-	if (m * 0.5)
-		_reworked_putchar(m);
+	/* Is the same as % 2 */
+	_putchar((m & 1) + '0');
 }
 
 /**
