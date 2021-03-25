@@ -10,11 +10,11 @@
 unsigned int binary_to_uint(const char *b)
 {
 	char *str = (char *) b;
-	int last_digit;
-	int entry_num;
-	int conversion;
-	int base = 1;
-	int temp;
+	unsigned int last_digit;
+	unsigned int entry_num;
+	unsigned int conversion;
+	unsigned int base = 1;
+	unsigned int temp;
 
 	if (!b || !isBinary(b))
 		return (0);
