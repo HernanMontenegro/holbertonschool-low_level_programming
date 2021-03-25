@@ -38,8 +38,8 @@ void print_process(unsigned long int n, long int *rec)
 */
 void print_binary(unsigned long int n)
 {
-        long int recursion_time = 0;
-        long int *rec = &recursion_time;
+	long int recursion_time = 0;
+	long int *rec = &recursion_time;
 
-        print_process(n, rec);
+	print_process(n, rec);
 }
