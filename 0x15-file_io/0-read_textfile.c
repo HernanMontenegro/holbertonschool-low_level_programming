@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	found = read(fp, store, letters);
 	if (found != -1)
 	{
-		count = write(STDOUT_FILENO, store, letters);
+		count = write(STDOUT_FILENO, store, found);
 		if (count == -1)
 			return (0);
 	}
