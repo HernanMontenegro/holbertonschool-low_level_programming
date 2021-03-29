@@ -16,7 +16,7 @@ int main(__attribute__((unused))int ac, char **av)
 	char *filename, *destFileName;
 	char store[1024];
 
-	if (ac > 3)
+	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
