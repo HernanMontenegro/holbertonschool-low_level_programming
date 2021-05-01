@@ -2,6 +2,13 @@
 #include "5-get_dnodeint.c"
 #include "1-dlistint_len.c"
 
+/**
+* delete_dnodeint_at_index - delete a node in an index
+* @head: the head node
+* @index: the index target
+* ------------------------------------------
+* Return: 1 if worked, -1 if not
+*/
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *target = NULL, *t_prev = NULL, *t_next = NULL;
