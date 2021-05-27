@@ -11,42 +11,29 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int indx = key_index((unsigned char *)key, ht->size);
-	hash_node_t *aux = NULL;
+	hash_node_t *new_node = NULL;
 
 	if (!ht || strcmp(key, "") == 0)
 		return (0);
+
+	new_node = malloc(sizeof(hash_node_t));
+		if (!new_node)
+			return(0);
+	new_node->key = malloc((strlen(key) + 1) * sizeof(char));
+	new_node->value = malloc((strlen(value) + 1) * sizeof(char));
+	if (!new_node->key || !new_node->value)
+	{
+		free(new_node);
+		return (0);
+	}
+	new_node->key = strcpy(new_node->key, key);
+	new_node->value = strcpy(new_node->value, value);
+
 	if (!ht->array[indx])
-	{
-		ht->array[indx] = malloc(ht->size * sizeof(hash_table_t));
-		ht->array[indx]->key = malloc((strlen(key) + 1) * sizeof(char));
-		ht->array[indx]->value = malloc((strlen(value) + 1) * sizeof(char));
-		if (!ht->array[indx] || !ht->array[indx]->value)
-			return (0);
-		ht->array[indx]->key = strcpy(ht->array[indx]->key, key);
-		ht->array[indx]->value = strcpy(ht->array[indx]->value, value);
-		return (1);
-	}
-	aux = ht->array[indx];
-	while (aux)
-	{
-		if (!aux->next)
-		{
-			aux->next = malloc(sizeof(hash_node_t));
-			aux->next->key = malloc((strlen(key) + 1) * sizeof(char));
-			aux->next->value = malloc((strlen(value) + 1) * sizeof(char));
-			aux->next->next = NULL;
-			if (!aux->next)
-				return (0);
-			if (!aux->next->value || !aux->next->key)
-			{
-				free(aux->next);
-				return (0);
-			}
-			aux->next->key = strcpy(aux->next->key, key);
-			aux->next->value = strcpy(aux->next->value, value);
-			break;
-		}
-		aux = aux->next;
-	}
+		new_node->next = NULL;
+	else
+		new_node->next = ht->array[indx];
+
+	ht->array[indx] = new_node;
 	return (1);
 }
