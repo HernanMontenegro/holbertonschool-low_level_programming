@@ -7,14 +7,12 @@
 */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int i = 0;
+	unsigned long int i = 0, j = 0;
 	hash_node_t *cursor = NULL;
-	char *result = NULL;
 
 	if (!ht)
 		return;
-
-	result = strdup("{");
+	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
 		if (!ht->array[i])
@@ -23,19 +21,19 @@ void hash_table_print(const hash_table_t *ht)
 		cursor = ht->array[i];
 		while (cursor)
 		{
-			result = strcat(result, cursor->key);
-			result = strcat(result, "': ");
-			result = strcat(result, "'");
-			result = strcat(result, cursor->value);
-			result = strcat(result, "'");
+			printf("'%s': '%s'", cursor->key, cursor->value);
 			if (cursor->next)
-				result = strcat(result, ", ");
+				printf(", ");
 			cursor = cursor->next;
 		}
-		result = strcat(result, ", ");
+		for (j = i + 1; j < ht->size; j++)
+		{
+			if (ht->array[j])
+			{
+				printf(", ");
+				break;
+			}
+		}
 	}
-	result[strlen(result) - 3] = '\0';
-	result = strcat(result, "}");
-
-	printf("%s\n", result);
+	printf("}\n");
 }
