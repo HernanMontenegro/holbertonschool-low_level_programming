@@ -23,7 +23,8 @@ void hash_table_delete(hash_table_t *ht)
 		{
 			aux = cursor->next;
 			free(cursor->key);
-			free(cursor->value);
+			if (cursor->value)
+				free(cursor->value);
 			free(cursor);
 			cursor = aux;
 		}
