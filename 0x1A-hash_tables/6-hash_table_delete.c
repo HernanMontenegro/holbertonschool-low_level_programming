@@ -28,4 +28,6 @@ void hash_table_delete(hash_table_t *ht)
 			cursor = aux;
 		}
 	}
+	free(ht->array);
+	free(ht);
 }
