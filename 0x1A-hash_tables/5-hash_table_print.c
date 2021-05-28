@@ -31,6 +31,7 @@ void hash_table_print(const hash_table_t *ht)
 			if (ht->array[j])
 			{
 				printf(", ");
+				i = j - 1;
 				break;
 			}
 		}
