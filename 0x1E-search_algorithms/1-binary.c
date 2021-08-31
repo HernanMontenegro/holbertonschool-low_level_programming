@@ -1,5 +1,4 @@
 #include "search_algos.h"
-int binary_recursive(int *array, int value, size_t left, size_t right);
 
 /**
  * binary_search - searches for a value in an array of
@@ -40,9 +39,9 @@ int binary_recursive(int *array, int value, size_t left, size_t right)
 	{
 		printf(" %d", array[i]);
 		if (i != right)
-			putchar(',');
+			printf(",");
 	}
-	putchar('\n');
+	printf("\n");
 
 	mid = (left + right) / 2;
 
