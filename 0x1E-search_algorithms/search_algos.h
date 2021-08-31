@@ -8,6 +8,6 @@
 /* Prototypes */
 int linear_search(int *array, size_t size, int value);
 int binary_search(int *array, size_t size, int value);
-int binary_recursive(int *array, int value, size_t left, size_t right);
+void print_array_from_to(int *array, int from, int to);
 
 #endif /* SEARCH_ALGOS_H */

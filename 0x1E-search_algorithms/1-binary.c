@@ -11,44 +11,48 @@
 */
 int binary_search(int *array, size_t size, int value)
 {
+	int left, right, mid;
+
 	if (!array)
 		return (-1);
 
-	return (binary_recursive(array, value, 0, size - 1));
+	left = 0;
+	right = size - 1;
+
+	while (left <= right)
+	{
+		print_array_from_to(array, left, right);
+		mid = (left + right) / 2;
+
+		if (value == array[mid])
+			return (mid);
+		else if (value < array[mid])
+			right = mid - 1;
+		else
+			left = mid + 1;
+	}
+
+	return (-1);
 }
 
 /**
- * binaryRecursive - The recursive way
+ * print_array_from_to - Prints an array between 2 indexes
  * @array: the array
- * @value: the value to look for
- * @left: the most left index of the array
- * @right: the most right index of the array
+ * @from: the starting index for printing the array
+ * @to: the index where the function should stop printing
  * ---------------------------
- * Return: The index where the value is located
 */
-int binary_recursive(int *array, int value, size_t left, size_t right)
+void print_array_from_to(int *array, int from, int to)
 {
-	size_t mid, i;
-
-	if (left > right)
-		return (-1);
+	int i;
 
 	/* Printing the incoming array */
 	printf("Searching in array:");
-	for (i = 0; i < right + 1; i++)
+	for (i = from; i < to + 1; i++)
 	{
 		printf(" %d", array[i]);
-		if (i != right)
+		if (i != to)
 			printf(",");
 	}
 	printf("\n");
-
-	mid = (left + right) / 2;
-
-	if (array[mid] == value)
-		return (mid);
-	else if (value < array[mid])
-		return (binary_recursive(array, value, left, mid - 1));
-	else
-		return (binary_recursive(array, value, mid + 1, right));
 }
